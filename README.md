@@ -14,10 +14,20 @@ A full-stack RAG application that enables users to upload PDFs and ask questions
 
 ## 🛠 Tech Stack
 
-**Frontend:** React, Vite  
-**Backend:** FastAPI, PostgreSQL  
-**AI:** LangChain, FAISS, Sentence Transformers, OpenRouter  
-**Auth:** JWT, bcrypt
+| Layer | Technology |
+|---|---|
+| Frontend | React 18, Vite, plain CSS (no UI framework) |
+| Backend | Python, FastAPI, Uvicorn |
+| Database | PostgreSQL (SQLite supported for local dev), SQLAlchemy ORM |
+| Auth | JWT (python-jose), bcrypt password hashing (passlib) |
+| Vector search | FAISS (`IndexFlatIP`) |
+| Embeddings | SentenceTransformers (`all-MiniLM-L6-v2`, 384-dim) |
+| PDF processing | PyMuPDF (text extraction) |
+| Text chunking | LangChain `RecursiveCharacterTextSplitter` |
+| LLM orchestration | LangChain `ChatOpenAI` → OpenRouter (OpenAI-compatible API) |
+| Email | Python `smtplib` (SMTP, e.g. Gmail App Password) |
+| Device/location metadata | `user-agents` (User-Agent parsing), ip-api.com (IP geolocation) |
+| Streaming transport | Server-Sent Events (SSE) |
 
 ## 🏗 Architecture
 
