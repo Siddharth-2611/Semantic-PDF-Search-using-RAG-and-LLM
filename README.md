@@ -1,4 +1,4 @@
-# 🚀 DocSift - Semantic PDF Search Engine
+# 🚀 Semantic PDF Search Engine
 
 A full-stack RAG application that enables users to upload PDFs and ask questions in natural language, returning context-aware answers with source citations.
 
